@@ -1,2 +1,2 @@
-# VolodyaVenya.github.io
- Сайт портфолио визуализатора
+# volodyavenya.github.io
+Website Visualizer Portfolio
