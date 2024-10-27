@@ -1,0 +1,236 @@
+/* Homepage */
+html {
+position: relative;
+width: 1440px;
+height: 1500px;
+
+background: #FFFFFF;
+}
+
+/* Footer */
+footer {
+position: absolute;
+width: 1440px;
+height: 30px;
+left: 0px;
+bottom: 0px;
+}
+
+
+/* telegram 1 */
+.telegram1 {
+position: absolute;
+width: 10px;
+height: 10px;
+left: 5px;
+top: 10px;
+}
+
+/* Copyright by Venyapupkin */
+.copyright {
+position: absolute;
+width: 146px;
+height: 13px;
+left: 24px;
+top: 8px;
+
+font-family: 'Hepta Slab';
+font-style: normal;
+font-weight: 400;
+font-size: 10px;
+line-height: 13px;
+/* identical to box height */
+display: flex;
+align-items: center;
+
+color: #000000;
+}
+
+
+/* Body */
+main {
+position: absolute;
+width: 1440px;
+height: 1300px;
+left: 0px;
+top: 120px;
+}
+
+
+/* Photo 1 */
+.photo {
+position: absolute;
+width: 1440px;
+height: 795px;
+left: 0px;
+top: 300px;
+
+background: url(Photo.png);
+}
+
+/* Здравствуйте! */
+.text {
+width: 1440px;
+height: 350px;
+
+font-family: 'Hepta Slab';
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+line-height: 25px;
+display: flex;
+align-items: left;
+
+color: #000000;
+
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+}
+
+
+/* Header */
+header {
+position: absolute;
+width: 1440px;
+height: 120px;
+left: 0px;
+top: 0px;
+}
+
+
+/* Nav */
+.button-box {
+position: absolute;
+width: 720px;
+height: 120px;
+left: 720px;
+top: 0px;
+}
+
+
+
+/* Buttons */
+.header-container {
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 0px;
+gap: 30px;
+
+position: absolute;
+width: 507px;
+height: 30px;
+left: calc(50% - 507px/2);
+top: calc(50% - 30px/2);
+}
+
+
+/* Обо мне */
+.nav-button1 {
+width: 102px;
+height: 30px;
+
+font-family: 'Hepta Slab';
+font-style: normal;
+font-weight: 400;
+font-size: 24px;
+line-height: 30px;
+/* identical to box height */
+display: flex;
+align-items: center;
+text-align: center;
+
+color: #000000;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+}
+
+/* Контакты */
+.nav-button2 {
+width: 113px;
+height: 30px;
+
+font-family: 'Hepta Slab';
+font-style: normal;
+font-weight: 400;
+font-size: 24px;
+line-height: 30px;
+/* identical to box height */
+display: flex;
+align-items: center;
+text-align: center;
+
+color: #000000;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+}
+
+/* Проекты */
+.nav-button3 {
+width: 104px;
+height: 30px;
+
+font-family: 'Hepta Slab';
+font-style: normal;
+font-weight: 400;
+font-size: 24px;
+line-height: 30px;
+/* identical to box height */
+display: flex;
+align-items: center;
+text-align: center;
+
+color: #000000;
+
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+flex-grow: 0;
+}
+
+/* Условия */
+.nav-button4 {
+width: 98px;
+height: 30px;
+
+font-family: 'Hepta Slab';
+font-style: normal;
+font-weight: 400;
+font-size: 24px;
+line-height: 30px;
+/* identical to box height */
+display: flex;
+align-items: center;
+text-align: center;
+
+color: #000000;
+
+
+/* Inside auto layout */
+flex: none;
+order: 3;
+flex-grow: 0;
+}
+
+/* Logo */
+
+position: absolute;
+width: 248.5px;
+height: 48.6px;
+left: 32px;
+top: 38.9px;
