@@ -1,236 +1,326 @@
-/* Homepage */
-html {
-position: relative;
-width: 1440px;
-height: 1500px;
-
-background: #FFFFFF;
+/* Общие стили */
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: black;
+    background-color: #f9f9f9; /* Легкий фон для всего сайта */
 }
 
-/* Footer */
-footer {
-position: absolute;
-width: 1440px;
-height: 30px;
-left: 0px;
-bottom: 0px;
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-
-/* telegram 1 */
-.telegram1 {
-position: absolute;
-width: 10px;
-height: 10px;
-left: 5px;
-top: 10px;
+/* Заголовки */
+h1, h2, h3 {
+    color: black;
+    font-weight: bold;
 }
 
-/* Copyright by Venyapupkin */
-.copyright {
-position: absolute;
-width: 146px;
-height: 13px;
-left: 24px;
-top: 8px;
-
-font-family: 'Hepta Slab';
-font-style: normal;
-font-weight: 400;
-font-size: 10px;
-line-height: 13px;
-/* identical to box height */
-display: flex;
-align-items: center;
-
-color: #000000;
+/* Навигация */
+.nav-container {
+    width: 66.67%;
+    margin: 0 auto;
 }
 
-
-/* Body */
-main {
-position: absolute;
-width: 1440px;
-height: 1300px;
-left: 0px;
-top: 120px;
+.main-nav {
+    display: flex;
+    justify-content: space-between;
+    height: 60px;
+    background-color: #333;
 }
 
-
-/* Photo 1 */
-.photo {
-position: absolute;
-width: 1440px;
-height: 795px;
-left: 0px;
-top: 300px;
-
-background: url(Photo.png);
+.nav-section {
+    width: 25%;
+    text-align: center;
+    padding: 15px;
 }
 
-/* Здравствуйте! */
-.text {
-width: 1440px;
-height: 350px;
-
-font-family: 'Hepta Slab';
-font-style: normal;
-font-weight: 400;
-font-size: 20px;
-line-height: 25px;
-display: flex;
-align-items: left;
-
-color: #000000;
-
-
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-align-self: stretch;
-flex-grow: 0;
+.nav-section a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    display: block;
 }
 
-
-/* Header */
-header {
-position: absolute;
-width: 1440px;
-height: 120px;
-left: 0px;
-top: 0px;
+.nav-section a:hover {
+    text-decoration: underline;
 }
 
-
-/* Nav */
-.button-box {
-position: absolute;
-width: 720px;
-height: 120px;
-left: 720px;
-top: 0px;
+/* Кнопка для возврата наверх */
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-
-
-/* Buttons */
-.header-container {
-/* Auto layout */
-display: flex;
-flex-direction: row;
-align-items: center;
-padding: 0px;
-gap: 30px;
-
-position: absolute;
-width: 507px;
-height: 30px;
-left: calc(50% - 507px/2);
-top: calc(50% - 30px/2);
+/* Разделы с фоновыми изображениями */
+.about, .projects, .stage-of-work, .contacts {
+    padding: 50px 0;
+    color: white;
+    background-size: cover;
+    background-position: center;
 }
 
-
-/* Обо мне */
-.nav-button1 {
-width: 102px;
-height: 30px;
-
-font-family: 'Hepta Slab';
-font-style: normal;
-font-weight: 400;
-font-size: 24px;
-line-height: 30px;
-/* identical to box height */
-display: flex;
-align-items: center;
-text-align: center;
-
-color: #000000;
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
+.about {
+    background-image: url('Pictures/about-bg.jpg');
 }
 
-/* Контакты */
-.nav-button2 {
-width: 113px;
-height: 30px;
-
-font-family: 'Hepta Slab';
-font-style: normal;
-font-weight: 400;
-font-size: 24px;
-line-height: 30px;
-/* identical to box height */
-display: flex;
-align-items: center;
-text-align: center;
-
-color: #000000;
-
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-flex-grow: 0;
+.projects {
+    background-image: url('Pictures/projects-bg.jpg');
 }
+
+.stage-of-work {
+    background-image: url('Pictures/stage-bg.jpg');
+}
+
+.contacts {
+    background-image: url('Pictures/contacts-bg.jpg');
+}
+
+.about {
+    background: #f9f9f9;
+    padding: 2rem 0;
+    text-align: center;
+}
+
+.about h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: #333;
+}
+
+.about-steps {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.about-steps li {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 2rem;
+    background: #fff;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.step-icon {
+    flex-shrink: 0;
+    margin-right: 1rem;
+}
+
+.step-icon img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+}
+
+.step-details {
+    flex-grow: 1;
+}
+
+.step-details h3 {
+    font-size: 1.5rem;
+    color: #444;
+    margin: 0;
+    margin-bottom: 0.5rem;
+}
+
+.step-details p {
+    font-size: 1rem;
+    color: #666;
+}
+
 
 /* Проекты */
-.nav-button3 {
-width: 104px;
-height: 30px;
-
-font-family: 'Hepta Slab';
-font-style: normal;
-font-weight: 400;
-font-size: 24px;
-line-height: 30px;
-/* identical to box height */
-display: flex;
-align-items: center;
-text-align: center;
-
-color: #000000;
-
-
-/* Inside auto layout */
-flex: none;
-order: 2;
-flex-grow: 0;
+.project-selection {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 30px;
 }
 
-/* Условия */
-.nav-button4 {
-width: 98px;
-height: 30px;
-
-font-family: 'Hepta Slab';
-font-style: normal;
-font-weight: 400;
-font-size: 24px;
-line-height: 30px;
-/* identical to box height */
-display: flex;
-align-items: center;
-text-align: center;
-
-color: #000000;
-
-
-/* Inside auto layout */
-flex: none;
-order: 3;
-flex-grow: 0;
+.project-thumbnail {
+    width: 300px;
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.3s ease;
 }
 
-/* Logo */
+.project-thumbnail:hover {
+    transform: scale(1.05);
+}
 
-position: absolute;
-width: 248.5px;
-height: 48.6px;
-left: 32px;
-top: 38.9px;
+.project-selection img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Этапы работы */
+.stage-of-work {
+    background: #f9f9f9;
+    padding: 2rem 0;
+    text-align: center;
+}
+
+.stage-of-work h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: #333;
+}
+
+.work-steps {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.work-steps li {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 2rem;
+    background: #fff;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.step-icon {
+    flex-shrink: 0;
+    margin-right: 1rem;
+}
+
+.step-icon img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+}
+
+.step-details {
+    flex-grow: 1;
+}
+
+.step-details h3 {
+    font-size: 1.5rem;
+    color: #444;
+    margin: 0;
+    margin-bottom: 0.5rem;
+}
+
+.step-details p {
+    font-size: 1rem;
+    color: #666;
+}
+
+
+/* Контакты */
+.contacts ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+}
+
+.contacts li {
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.contacts a {
+    color: #444;
+    text-decoration: none;
+    font-size: 1.2rem;
+    display: block;
+    padding: 10px;
+}
+
+.contacts a:hover {
+    background-color: #f4f4f4;
+    border-radius: 5px;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .main-nav {
+        flex-direction: column;
+    }
+	
+    .nav-section {
+        width: 100%;
+        text-align: center;
+        padding: 10px;
+    }
+
+    .about-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about-photo {
+        width: 200px;
+    }
+
+    .about-details {
+        text-align: center;
+    }
+
+    .work-steps li {
+        flex-direction: column;
+        align-items: center;
+    }
+
+.project-selection {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.project-thumbnail {
+    width: 200px;
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    border-radius: 5px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.project-thumbnail:hover {
+    transform: scale(1.05);  /* Лёгкое увеличение при наведении */
+    opacity: 0.8;  /* Уменьшение прозрачности при наведении */
+}
+
+.swiper-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+}
+
+.swiper-slide img {
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+    margin: 0 auto;
+}

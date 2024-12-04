@@ -1,110 +1,247 @@
 <!DOCTYPE html>
 <html lang="ru">
-	<head>
-		<meta charset="UTF-8">
-		<meta name="author" content="https://t.me/Venya_Pupkin">
-		<meta name="viewport" content="width=device-width">
-		<meta name="description" content="Профессиональный визуализатор интерьеров 
-		с опытом создания реалистичных 3D визуализаций для 
-		жилых и коммерческих пространств. В портфолио 
-		представлены проекты по дизайну интерьеров, 
-		рендеринг в фотореалистичном качестве и креативные решения для клиентов.">
-		<title>Портфолио визуализатора интерьеров Анастасия Климова | 3D визуализация и дизайн помещений</title>
-		
-		<link
-		href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Sonsie+One"
-		rel="stylesheet"
-		type="text/css" />
-		<link href="styles/styles_index.css" rel="stylesheet" type="text/css" />
-		
-		<meta property="og:title" content="Портфолио визуализатора интерьеров | 3D визуализация и дизайн помещений">
-		<meta property="og:description" content="Профессиональный визуализатор интерьеров с 
-		опытом создания реалистичных 3D визуализаций для жилых и коммерческих пространств. 
-		Ознакомьтесь с моими проектами, включая дизайн интерьеров и рендеринг в фотореалистичном качестве.">
-		<meta property="og:image" content="https://sun9-14.userapi.com/impg/7zl3BOsdoDPAIZ8qjLtOUfWbmFkxctMkSE3zUg/Q42O3cHwock.jpg?size=1080x1920&quality=96&sign=09e222549a9a408901d0b1b8623a729e&type=album">		
-<!-- СДЕЛАТЬ ИКОНКИ для вкладок
-		Для iPad 3 с Retina-экраном высокого разрешения:
-		<link
-		  rel="apple-touch-icon-precomposed"
-		  sizes="144x144"
-		  href="Icon1.ico" />
-		Для iPhone с Retina-экраном высокого разрешения: 
-		<link
-		  rel="apple-touch-icon-precomposed"
-		  sizes="114x114"
-		  href="icon2.ico" />
-		Для iPad первого и второго поколения: 
-		<link
-		  rel="apple-touch-icon-precomposed"
-		  sizes="72x72"
-		  href="icon3.ico" />
-		Для iPhone, iPod Touch без Retina и устройств с Android 2.1+: 
-		<link
-		  rel="apple-touch-icon-precomposed"
-		  href="icon4.ico" />
-		Для других случаев - обычный favicon
-		<link
-		  rel="shortcut icon"
-		  href="icon5.ico" />
-		 -->
+<head>
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Портфолио профессионального визуализатора интерьеров. Качественные 3D визуализации и рендеринг интерьеров для частных клиентов и компаний.">
+	<meta name="keywords" content="визуализация интерьеров, 3D рендеринг, дизайн интерьеров, архитектурная визуализация, 3D модели">
+	<meta name="author" content="Анастасия Климова">
+	<meta property="og:title" content="Портфолио Анастасии Климовой | 3D визуализация">
+	<meta property="og:description" content="Портфолио профессионального визуализатора интерьеров с примерами проектов, этапами работы и контактной информацией.">
+	<meta property="og:image" content="link_to_image_for_social_media.png"> <!-- Добавьте ссылку на изображение для соцсетей -->
+	<meta name="robots" content="index, follow">
+    <title>Портфолио Анастасии Климовой | 3D визуализация</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/styles_index.css">
+	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
 
-	</head>
-	<body class="body1">
-		<div class="header">
-		<header>
-		<h1>Портфолио визуализатора интерьеров | 3D визуализация и дизайн помещений</h1> 
-		<div class="button-box">
-		<nav class="container">
-			
-			<ul class="header-container">
-				<li class="nav-button1">
-					<a href="#portfolio">Обо мне</a>
-				</li>
-				<li class="nav-button2">
-					<a href="social.html">Контакты</a>
-				</li>
-				<li class="nav-button3">
-					<a href="projects.html">Проекты</a>
-				</li>
-				<li class="nav-button4">
-				<a href="stage_of_work.html">Этапы работы</a>
-				</li>
-			</ul>
-			</div>
-			<form>
-				<input type="search" name="q" placeholder="Поиск по сайту">
-				<input type="submit" value="Поиск">
-			</form>
-		</nav>
-		</header>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1 class="site-title">Анастасия Климова — 3D Визуализация</h1>
+		<div class="nav-container">
+				<nav class="main-nav">
+					<div class="nav-section"><a href="#about">Обо мне</a></div>
+					<div class="nav-section"><a href="#projects">Проекты</a></div>
+					<div class="nav-section"><a href="#stage_of_work">Этапы работы</a></div>
+					<div class="nav-section"><a href="#contacts">Контакты</a></div>
+				</nav>
 		</div>
-		<main id="portfolio">
-			<h2>Немного обо мне</h2>
-			<div class="text">
-			<p> 
-				Здравствуйте! Меня зовут Анастасия.<br>
-				Я занимаюсь визуализацией интерьеров уже более 3 лет. <br>
-				На данный момент я выполнила более 60 заказов от частных дизайнеров,<br> студий и коммерческих заказов для владельцев бизнеса.<br>
-				Закажите 3D-визуализацию у меня и вы получите: 
-			</p>
-			<ul>
-				<li>Качественную 3d визуализацию;</li>
-				<li>3D модели входят в стоимость;</li>
-				<li>Самостоятельный подбор аналогов, при отсутствии необходимой 3D модели;</li>
-				<li>Предметное моделирование;</li>
-				<li>Самостоятельный подбор декора;</li>
-				<li>Результат за 1-3 дня в зависимости от площади.</li>
-				<li>Дополнительные услуги.</li>
-			</ul>
+        </div>
+    </header>
+	<button class="back-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">↑</button>
+    <main>
+	<section id="about" class="about">
+    <div class="container">
+        <h2>Обо мне</h2>
+        <p>Я — профессиональный визуализатор интерьеров с более чем 3-летним опытом работы. Моя цель — создать визуализации, которые помогают клиентам увидеть будущее пространство и воплотить идеи в реальность.</p>
+        
+        <ol class="about-steps">
+            <li>
+                <div class="step-icon">
+                    <img src="Pictures/experience-icon.png" alt="Опыт">
+                </div>
+                <div class="step-details">
+                    <h3>Мой опыт</h3>
+                    <p>За годы работы я завершила более 60 успешных проектов для частных клиентов и коммерческих компаний. Я создаю качественные 3D визуализации, которые помогают дизайнерам и архитекторам продемонстрировать свои идеи заказчикам.</p>
+                </div>
+            </li>
+            <li>
+                <div class="step-icon">
+                    <img src="Pictures/skills-icon.png" alt="Навыки">
+                </div>
+                <div class="step-details">
+                    <h3>Мои навыки</h3>
+                    <p>Я использую новейшие технологии и программы, такие как 3ds Max, V-Ray и SketchUp, для создания фотореалистичных рендеров. Также я имею опыт в подборе материалов, освещения и моделировании интерьеров.</p>
+                </div>
+            </li>
+            <li>
+                <div class="step-icon">
+                    <img src="Pictures/approach-icon.png" alt="Подход">
+                </div>
+                <div class="step-details">
+                    <h3>Мой подход</h3>
+                    <p>Я всегда ориентируюсь на индивидуальные предпочтения клиентов, учитываю каждый нюанс в проекте и стремлюсь к тому, чтобы финальный результат превосходил ожидания. Коммуникация и внимание к деталям — мои ключевые принципы.</p>
+                </div>
+            </li>
+            <li>
+                <div class="step-icon">
+                    <img src="Pictures/results-icon.png" alt="Результаты">
+                </div>
+                <div class="step-details">
+                    <h3>Результат</h3>
+                    <p>Мои работы помогают дизайнерам и архитекторам не только визуализировать их проекты, но и обеспечить их успешную реализацию. Я горжусь каждым завершенным проектом и всегда стремлюсь к совершенству.</p>
+                </div>
+            </li>
+        </ol>
+    </div>
+</section>
+
+
+<section id="projects" class="projects">
+    <div class="container">
+        <h2>Мои проекты</h2>
+        <p>Выберите проект, чтобы увидеть детали:</p>
+        <div class="project-selection">
+            <img src="projects/project1/image1.png" alt="Проект 1" class="project-thumbnail" onclick="openProject('project1')">
+            <img src="projects/project2/image1.png" alt="Проект 2" class="project-thumbnail" onclick="openProject('project2')">
+            <img src="projects/project3/image1.png" alt="Проект 3" class="project-thumbnail" onclick="openProject('project3')">
+        </div>
+
+        <!-- Swiper -->
+        <div class="swiper-container">
+            <div class="swiper-wrapper" id="swiperWrapper">
+                <!-- Слайды будут добавляться через JavaScript -->
+            </div>
+            <!-- Навигация -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+    </div>
+</section>
+
+		
+	<section id="stage_of_work" class="stage-of-work">
+    <div class="container">
+        <h2>Этапы работы</h2>
+        <p>Мой процесс работы включает несколько ключевых этапов, каждый из которых направлен на создание качественного результата, который полностью удовлетворяет потребности клиента.</p>
+        
+        <ol class="work-steps">
+            <li>
+                <div class="step-icon">
+                    <img src="Pictures/step1-icon.png" alt="Шаг 1">
+                </div>
+                <div class="step-details">
+                    <h3>Ознакомление с техническим заданием</h3>
+                    <p>На этом этапе я внимательно изучаю ваше техническое задание, чтобы понять все требования и предпочтения. Мы обсуждаем сроки выполнения работы, стоимость проекта и уточняем детали, чтобы избежать недоразумений в процессе работы. Важно согласовать все ключевые моменты перед началом.</p>
+                </div>
+            </li>
+            <li>
+                <div class="step-icon">
+                    <img src="Pictures/step2-icon.png" alt="Шаг 2">
+                </div>
+                <div class="step-details">
+                    <h3>Заключение договора и предоплата</h3>
+                    <p>После того, как все условия согласованы, заключается договор, в котором закрепляются обязательства сторон. Для начала работы требуется предоплата, которая служит подтверждением вашего намерения и позволяет мне начать выполнение проекта.</p>
+                </div>
+            </li>
+            <li>
+                <div class="step-icon">
+                    <img src="Pictures/step3-icon.png" alt="Шаг 3">
+                </div>
+                <div class="step-details">
+                    <h3>Создание черновых рендеров и внесение корректировок</h3>
+                    <p>На этом этапе я создаю первые черновые рендеры, которые могут быть не совсем точными, но уже дают представление о будущем проекте. После того как вы получите эти изображения, я жду ваши комментарии и корректировки. Внесение изменений займет не более одного рабочего дня.</p>
+                </div>
+            </li>
+            <li>
+                <div class="step-icon">
+                    <img src="Pictures/step4-icon.png" alt="Шаг 4">
+                </div>
+                <div class="step-details">
+                    <h3>Согласование финального результата и передача материалов</h3>
+                    <p>После того как все корректировки внесены, я отправляю вам финальные визуализации. Вы проверяете их, и если все устраивает, вносите остаток оплаты. Затем я передаю вам готовые материалы, которые можно использовать для реализации проекта. Этот процесс завершает работу.</p>
+                </div>
+            </li>
+        </ol>
+    </div>
+</section>
+
+
+		<section id="contacts" class="contacts">
+			<div class="container">
+				<h2>Контакты</h2>
+				<ul>
+					<li>
+						<a href="https://t.me/admondantes01" target="_blank">
+							<img src="Pictures/telegram.svg" alt="Telegram"> Telegram
+						</a>
+					</li>
+					<li>
+						<a href="https://wa.me/79220084661" target="_blank">
+							<img src="Pictures/whatsapp.svg" alt="WhatsApp"> WhatsApp
+						</a>
+					</li>
+					<li>
+						<a href="https://www.instagram.com/admon_3d" target="_blank">
+							<img src="Pictures/instagram.svg" alt="Instagram"> Instagram
+						</a>
+					</li>
+				</ul>
 			</div>
-			<img class="photo" src="Pictures/Photo.jpg" alt="Это Я" width="250" height="300">
-		</main>
-		<div class="footer1">
-		<footer>
-			<a class="telegram1" href="https://t.me/Venya_Pupkin"><img src="Pictures/telegram.svg" alt="" width="20" height="20">
-			</a>
-			<p class="copyright">&#169; Copyright by VenyaPupkin 2024.</p>
-		</footer>
-		</div>
-	</body>
+		</section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Анастасия Климова. Все права защищены.</p>
+        </div>
+    </footer>
+	<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+	
+    <script>
+        const projects = {
+            project1: [
+                "projects/project1/image1.png",
+                "projects/project1/image2.png",
+                "projects/project1/image3.png"
+            ],
+            project2: [
+                "projects/project2/image1.png",
+                "projects/project2/image2.png",
+                "projects/project2/image3.png"
+            ],
+            project3: [
+                "projects/project3/image1.png",
+                "projects/project3/image2.png",
+                "projects/project3/image3.png"
+            ]
+        };
+
+        function openProject(projectName) {
+            const swiperWrapper = document.getElementById('swiperWrapper');
+            swiperWrapper.innerHTML = ''; // Очищаем текущие слайды
+
+            projects[projectName].forEach(image => {
+                const slide = document.createElement('div');
+                slide.classList.add('swiper-slide');
+                slide.innerHTML = `<img src="${image}" alt="Изображение проекта">`;
+                swiperWrapper.appendChild(slide); // Добавляем новый слайд
+            });
+
+            // Инициализация Swiper после добавления новых изображений
+            if (swiper) {
+                swiper.destroy(); // Уничтожаем старую инициализацию
+            }
+
+            swiper = new Swiper('.swiper-container', {
+                slidesPerView: 1,
+                spaceBetween: 10,
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev'
+                },
+                loop: true,
+                autoplay: {
+                    delay: 3000,
+                },
+            });
+        }
+
+        // Инициализация Swiper для первого проекта
+        let swiper = new Swiper('.swiper-container', {
+            slidesPerView: 1,
+            spaceBetween: 10,
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev'
+            },
+            loop: true,
+            autoplay: {
+                delay: 3000,
+            },
+        });
+    </script>
+</body>
 </html>
