@@ -1,10 +1,11 @@
 /* Общие стили */
 body {
+    height: 100%;
     font-family: 'Open Sans', sans-serif;
     margin: 0;
     padding: 0;
-    color: black;
-    background-color: #f9f9f9; /* Легкий фон для всего сайта */
+    color: black; /* Изменено на черный цвет текста */
+    background-color: #f5f5dc; /* Изменено на бежевый фон */
 }
 
 .container {
@@ -21,21 +22,37 @@ h1, h2, h3 {
 
 /* Навигация */
 .nav-container {
-    width: 66.67%;
+    width: 100%;
     margin: 0 auto;
 }
 
 .main-nav {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around; /* Равномерное распределение секций */
+    align-items: center;
     height: 60px;
     background-color: #333;
+    width: 100vw; /* Изменено на полную ширину экрана */
+    padding: 0 20px;
+    box-sizing: border-box;
 }
 
 .nav-section {
-    width: 25%;
     text-align: center;
-    padding: 15px;
+    padding: 0 15px; /* Уменьшено для равномерного промежутка */
+    position: relative;
+    flex: 1; /* Равномерное распределение ширины */
+}
+
+.nav-section:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 50%;
+    width: 2px;
+    background-color: #4d4d4d; /* Чуть светлее фона блока навигации */
 }
 
 .nav-section a {
@@ -43,10 +60,28 @@ h1, h2, h3 {
     text-decoration: none;
     font-weight: bold;
     display: block;
+    padding: 10px 20px;
+    text-align: center; /* Центрирование текста */
+    box-sizing: border-box; /* Включаем padding и border в размеры элемента */
+    margin: 0 5px; /* Добавлено для равномерного промежутка */
 }
 
 .nav-section a:hover {
     text-decoration: underline;
+}
+
+.nav-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.nav-toggle span {
+    background: white;
+    height: 3px;
+    width: 25px;
+    margin: 4px 0;
+    transition: 0.4s;
 }
 
 /* Кнопка для возврата наверх */
@@ -91,10 +126,12 @@ h1, h2, h3 {
     background-image: url('Pictures/contacts-bg.jpg');
 }
 
+/* Секция "О нас" */
 .about {
     background: #f9f9f9;
     padding: 2rem 0;
     text-align: center;
+    color: #333;
 }
 
 .about h2 {
@@ -119,6 +156,7 @@ h1, h2, h3 {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
+/* Общие стили для иконок и деталей шагов */
 .step-icon {
     flex-shrink: 0;
     margin-right: 1rem;
@@ -146,30 +184,41 @@ h1, h2, h3 {
     color: #666;
 }
 
-
 /* Проекты */
+.projects {
+    background: #f9f9f9;
+    padding: 2rem 0;
+    text-align: center;
+    color: #333;
+}
+
+.projects p {
+    text-align: left;
+    font-size: 1rem;
+    color: #333;
+}
+
 .project-selection {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Сетка в 3 столбца */
     gap: 20px;
     justify-content: center;
     margin-top: 30px;
 }
 
 .project-thumbnail {
-    width: 300px;
-    height: auto;
     cursor: pointer;
     transition: transform 0.3s ease;
 }
 
-.project-thumbnail:hover {
-    transform: scale(1.05);
-}
-
-.project-selection img {
+.project-thumbnail img {
     width: 100%;
     height: auto;
     border-radius: 10px;
+}
+
+.project-thumbnail:hover {
+    transform: scale(1.05);
 }
 
 /* Этапы работы */
@@ -177,6 +226,7 @@ h1, h2, h3 {
     background: #f9f9f9;
     padding: 2rem 0;
     text-align: center;
+    color: #333;
 }
 
 .stage-of-work h2 {
@@ -200,34 +250,6 @@ h1, h2, h3 {
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
-
-.step-icon {
-    flex-shrink: 0;
-    margin-right: 1rem;
-}
-
-.step-icon img {
-    width: 50px;
-    height: 50px;
-    object-fit: contain;
-}
-
-.step-details {
-    flex-grow: 1;
-}
-
-.step-details h3 {
-    font-size: 1.5rem;
-    color: #444;
-    margin: 0;
-    margin-bottom: 0.5rem;
-}
-
-.step-details p {
-    font-size: 1rem;
-    color: #666;
-}
-
 
 /* Контакты */
 .contacts ul {
@@ -261,15 +283,52 @@ h1, h2, h3 {
 }
 
 /* Адаптивность */
+@media (max-width: 1024px) {
+    .container {
+        width: 95%;
+    }
+
+    .main-nav {
+        flex-direction: column;
+        height: auto;
+        align-items: center; /* Центрирование кнопок */
+    }
+
+    .nav-section {
+        width: 100%;
+        padding: 10px 0;
+        display: flex;
+        justify-content: center; /* Центрирование кнопок */
+    }
+
+    .project-thumbnail {
+        width: 250px;
+    }
+}
+
 @media (max-width: 768px) {
     .main-nav {
         flex-direction: column;
+        align-items: flex-start;
+        height: auto;
+        display: none;
     }
-	
+
+    .main-nav.active {
+        display: flex;
+    }
+
+    .nav-toggle {
+        display: flex;
+    }
+
     .nav-section {
         width: 100%;
-        text-align: center;
-        padding: 10px;
+        padding: 10px 0;
+    }
+
+    .nav-section a {
+        padding: 10px 20px;
     }
 
     .about-content {
@@ -290,37 +349,195 @@ h1, h2, h3 {
         align-items: center;
     }
 
-.project-selection {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-    margin-bottom: 2rem;
+    .project-selection {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        margin-bottom: 2rem;
+    }
+
+    .project-thumbnail {
+        width: 200px;
+        height: auto;
+        cursor: pointer;
+        transition: transform 0.3s ease, opacity 0.3s ease;
+        border-radius: 5px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .project-thumbnail:hover {
+        transform: scale(1.05);  /* Лёгкое увеличение при наведении */
+        opacity: 0.8;  /* Уменьшение прозрачности при наведении */
+    }
 }
 
-.project-thumbnail {
+@media (max-width: 480px) {
+    .container {
+        width: 100%;
+    }
+
+    .main-nav {
+        flex-direction: column;
+    }
+
+    .nav-section {
+        width: 100%;
+        padding: 5px 0;
+    }
+
+    .about h2, .stage-of-work h2 {
+        font-size: 1.5rem;
+    }
+
+    .project-thumbnail {
+        width: 150px;
+    }
+
+    .contacts a {
+        font-size: 1rem;
+    }
+}
+
+/* Стили для контейнера всех изображений проекта */
+.project-images-overlay {
+    display: none; /* Скрываем контейнер по умолчанию */
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9); /* Темный полупрозрачный фон */
+    z-index: 1000; /* Поверх всех элементов */
+    flex-direction: column;
+}
+
+.project-images {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.project-image {
     width: 200px;
     height: auto;
     cursor: pointer;
-    transition: transform 0.3s ease, opacity 0.3s ease;
-    border-radius: 5px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
 }
 
-.project-thumbnail:hover {
-    transform: scale(1.05);  /* Лёгкое увеличение при наведении */
-    opacity: 0.8;  /* Уменьшение прозрачности при наведении */
+.project-image:hover {
+    transform: scale(1.05);
 }
 
-.swiper-container {
+/* Стили для кнопки закрытия контейнера изображений проекта */
+.project-images-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    font-size: 20px;
+    cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 400px;
+    z-index: 10;
 }
 
-.swiper-slide img {
-    display: block;
-    max-width: 100%;
-    max-height: 100%;
-    margin: 0 auto;
+.project-nav-zone {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 15%;
+    cursor: pointer;
+    z-index: 5;
+    transition: background 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.project-nav-zone-left {
+    left: 0;
+}
+
+.project-nav-zone-right {
+    right: 0;
+}
+
+.project-nav-zone:hover {
+    background: rgba(255, 255, 255, 0.1); /* Подсветка при наведении */
+}
+
+.full-image-overlay {
+    display: none; /* Скрываем контейнер по умолчанию */
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9); /* Темный полупрозрачный фон */
+    z-index: 1000; /* Поверх всех элементов */
+}
+
+.full-image-overlay img {
+    max-width: 90%;
+    max-height: 90%;
+}
+
+.full-image-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    font-size: 20px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+
+.full-image-nav-zone {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 15%;
+    cursor: pointer;
+    z-index: 5;
+    transition: background 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.full-image-nav-zone-left {
+    left: 0;
+}
+
+.full-image-nav-zone-right {
+    right: 0;
+}
+
+.full-image-nav-zone:hover {
+    background: rgba(255, 255, 255, 0.1); /* Подсветка при наведении */
+}
+
+.nav-arrow {
+    font-size: 2rem;
+    color: white;
 }
